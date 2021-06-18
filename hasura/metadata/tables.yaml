@@ -1,0 +1,18 @@
+- table:
+    schema: public
+    name: users
+  select_permissions:
+  - role: general
+    permission:
+      columns:
+      - created_at
+      - email
+      - full_name
+      - id
+      - mobile_number
+      - roles
+      - status
+      - updated_at
+      filter:
+        id:
+          _eq: X-Hasura-User-Id
